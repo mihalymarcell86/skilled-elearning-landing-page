@@ -1,0 +1,136 @@
+@use "utilities/global" as *;
+
+@include setup;
+
+body {
+  font-family: $font-jakarta;
+  background-color: hsl(0, 0%, 95%);
+  overflow-x: hidden;
+}
+
+a {
+  &:any-link {
+    @include setFont(rem(18px), 28px, 700);
+    text-decoration: none;
+    color: color(sasquatch-socks);
+  }
+  &:hover {
+    color: color(carnation-pink);
+  }
+}
+
+.header {
+  padding: rem(16px) rem(16px) 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: rem(38px);
+}
+
+.site-logo {
+  width: rem(89px);
+}
+
+.button {
+  @include setFont(rem(16px), 28px, 700);
+  color: color(white);
+  background-color: color(yankees-blue);
+  padding: em(10px, 16px) em(24px, 16px);
+  border: 0;
+  border-radius: 28px;
+  cursor: pointer;
+  &:hover {
+    background-color: color(dark-blue-gray);
+  }
+}
+
+.button--warm {
+  padding: em(15px, 16px) em(37px, 16px);
+  border-radius: 31.5px;
+  background-image: $gradient-warm;
+  &:hover {
+    background-image: $gradient-warm-hover;
+  }
+}
+
+.button--cold {
+  background-image: $gradient-cold;
+  &:hover {
+    background-image: $gradient-cold-hover;
+  }
+}
+
+.main {
+  padding-inline: rem(16px);
+  padding-bottom: rem(40px);
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top__text-content {
+  margin-bottom: rem(46px);
+}
+
+.top__heading {
+  @include setFont(rem(40px), 50px, 800);
+  color: color(yankees-blue);
+  margin-bottom: em(36px, 40px);
+}
+
+.paragraph {
+  @include setFont(rem(16px), 26px, 500);
+  color: color(roman-silver);
+  margin-bottom: em(24px, 16px);
+}
+
+.hero-img-wrapper {
+  width: rem(327px);
+  height: rem(301px);
+  margin-bottom: rem(66px);
+  img {
+    width: 430px;
+    height: 405px;
+    margin-left: -53px;
+    margin-top: -19px;
+  }
+}
+
+.courses__heading {
+  @include setFont(rem(24px), 32px, 800);
+  padding: em(24px, 24px) em(28px, 24px) em(32px, 24px);
+  background-image: $gradient-warm;
+  color: color(white);
+  border-radius: 10px;
+  margin-bottom: em(40px, 24px);
+}
+
+.courses__course {
+  background: color(white);
+  box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+  border-radius: 10px;
+  padding: 0 rem(28px) rem(32px);
+  margin-bottom: rem(40px);
+  position: relative;
+}
+
+.course__logo {
+  transform: translateY(-24px);
+}
+
+.course__title {
+  @include setFont(rem(20px), 25px, 800);
+  color: color(yankees-blue);
+  margin-bottom: em(16px, 20px);
+}
+
+.footer {
+  background-color: color(yankees-blue);
+  padding: rem(36px) rem(16px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

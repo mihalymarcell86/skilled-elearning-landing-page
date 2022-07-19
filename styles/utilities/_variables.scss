@@ -1,0 +1,38 @@
+$REM: 16;
+$font-jakarta: "Plus Jakarta Sans", sans-serif;
+$breakpoint: undefined;
+
+$colors: (
+  dark-blue-gray: hsl(234, 25%, 52%),
+  yankees-blue: hsl(233, 54%, 16%),
+  roman-silver: hsl(232, 10%, 56%),
+  sasquatch-socks: hsl(341, 92%, 62%),
+  carnation-pink: hsl(341, 100%, 83%),
+  white: hsl(0, 0%, 100%),
+);
+
+$gradient-warm: linear-gradient(
+  180deg,
+  hsl(13, 100%, 64%) 0.04%,
+  hsl(322, 87%, 55%) 100%
+);
+
+$gradient-warm-hover: linear-gradient(
+    0deg,
+    hsla(0, 0%, 100%, 0.502),
+    hsla(0, 0%, 100%, 0.502)
+  ),
+  linear-gradient(180deg, hsl(13, 100%, 64%) 0%, hsl(322, 87%, 55%) 100%);
+
+$gradient-cold: linear-gradient(
+  180deg,
+  hsl(237, 100%, 64%) 0%,
+  hsl(322, 87%, 55%) 99.92%
+);
+
+$gradient-cold-hover: linear-gradient(
+    0deg,
+    hsla(0, 0%, 100%, 0.502),
+    hsla(0, 0%, 100%, 0.5)
+  ),
+  linear-gradient(180deg, hsl(237, 100%, 64%) -54.32%, hsl(322, 87%, 55%) 100%);

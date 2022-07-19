@@ -1,0 +1,156 @@
+:root {
+  font-size: 1em;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: hsl(0deg, 0%, 95%);
+  overflow-x: hidden;
+}
+
+a:any-link {
+  font-size: 1.125rem;
+  line-height: 1.5555555556;
+  font-weight: 700;
+  text-decoration: none;
+  color: hsl(341deg, 92%, 62%);
+}
+a:hover {
+  color: hsl(341deg, 100%, 83%);
+}
+
+.header {
+  padding: 1rem 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.375rem;
+}
+
+.site-logo {
+  width: 5.5625rem;
+}
+
+.button {
+  font-size: 1rem;
+  line-height: 1.75;
+  font-weight: 700;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(233deg, 54%, 16%);
+  padding: 0.625em 1.5em;
+  border: 0;
+  border-radius: 28px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: hsl(234deg, 25%, 52%);
+}
+
+.button--warm {
+  padding: 0.9375em 2.3125em;
+  border-radius: 31.5px;
+  background-image: linear-gradient(180deg, hsl(13deg, 100%, 64%) 0.04%, hsl(322deg, 87%, 55%) 100%);
+}
+.button--warm:hover {
+  background-image: linear-gradient(0deg, hsla(0deg, 0%, 100%, 0.502), hsla(0deg, 0%, 100%, 0.502)), linear-gradient(180deg, hsl(13deg, 100%, 64%) 0%, hsl(322deg, 87%, 55%) 100%);
+}
+
+.button--cold {
+  background-image: linear-gradient(180deg, hsl(237deg, 100%, 64%) 0%, hsl(322deg, 87%, 55%) 99.92%);
+}
+.button--cold:hover {
+  background-image: linear-gradient(0deg, hsla(0deg, 0%, 100%, 0.502), hsla(0deg, 0%, 100%, 0.5)), linear-gradient(180deg, hsl(237deg, 100%, 64%) -54.32%, hsl(322deg, 87%, 55%) 100%);
+}
+
+.main {
+  padding-inline: 1rem;
+  padding-bottom: 2.5rem;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top__text-content {
+  margin-bottom: 2.875rem;
+}
+
+.top__heading {
+  font-size: 2.5rem;
+  line-height: 1.25;
+  font-weight: 800;
+  color: hsl(233deg, 54%, 16%);
+  margin-bottom: 0.9em;
+}
+
+.paragraph {
+  font-size: 1rem;
+  line-height: 1.625;
+  font-weight: 500;
+  color: hsl(232deg, 10%, 56%);
+  margin-bottom: 1.5em;
+}
+
+.hero-img-wrapper {
+  width: 20.4375rem;
+  height: 18.8125rem;
+  margin-bottom: 4.125rem;
+}
+.hero-img-wrapper img {
+  width: 430px;
+  height: 405px;
+  margin-left: -53px;
+  margin-top: -19px;
+}
+
+.courses__heading {
+  font-size: 1.5rem;
+  line-height: 1.3333333333;
+  font-weight: 800;
+  padding: 1em 1.1666666667em 1.3333333333em;
+  background-image: linear-gradient(180deg, hsl(13deg, 100%, 64%) 0.04%, hsl(322deg, 87%, 55%) 100%);
+  color: hsl(0deg, 0%, 100%);
+  border-radius: 10px;
+  margin-bottom: 1.6666666667em;
+}
+
+.courses__course {
+  background: hsl(0deg, 0%, 100%);
+  box-shadow: 0px 25px 50px rgba(6, 22, 141, 0.0442381);
+  border-radius: 10px;
+  padding: 0 1.75rem 2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.course__logo {
+  transform: translateY(-24px);
+}
+
+.course__title {
+  font-size: 1.25rem;
+  line-height: 1.25;
+  font-weight: 800;
+  color: hsl(233deg, 54%, 16%);
+  margin-bottom: 0.8em;
+}
+
+.footer {
+  background-color: hsl(233deg, 54%, 16%);
+  padding: 2.25rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*# sourceMappingURL=style.css.map */

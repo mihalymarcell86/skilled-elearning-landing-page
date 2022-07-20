@@ -24,15 +24,22 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: rem(38px);
+  padding-bottom: rem(38px);
   @media (min-width: $w-tablet) {
     padding: rem(24px) rem(40px) 0;
-    margin-bottom: rem(36px);
+    padding-bottom: rem(50px);
+  }
+  @media (min-width: $w-desktop) {
+    padding: rem(24px) rem(165px) 0;
+    padding-bottom: rem(87px);
   }
 }
 
 .site-logo {
   width: rem(89px);
+  @media (min-width: $w-desktop) {
+    width: rem(117.17px);
+  }
 }
 
 .button {
@@ -47,6 +54,10 @@ a {
   &:hover {
     background-color: color(dark-blue-gray);
   }
+  @media (min-width: $w-desktop) {
+    @include setFont(rem(18px), 28px);
+    padding: em(14px, 18px) em(31px, 18px);
+  }
 }
 
 .button--warm {
@@ -55,6 +66,9 @@ a {
   background-image: $gradient-warm;
   &:hover {
     background-image: $gradient-warm-hover;
+  }
+  @media (min-width: $w-desktop) {
+    padding: em(19px, 18px) em(31px, 18px);
   }
 }
 
@@ -72,10 +86,16 @@ a {
   padding-inline: rem(16px);
   padding-bottom: rem(66px);
   @media (min-width: $w-tablet) {
-    padding-inline: rem(40px);
+    padding-left: rem(40px);
+    padding-right: rem(81.5px);
     padding-bottom: rem(160.7px);
     flex-direction: row;
-    gap: rem(33.3px);
+    justify-content: space-between;
+  }
+  @media (min-width: $w-desktop) {
+    padding-left: rem(165px);
+    padding-right: rem(219px);
+    padding-bottom: rem(134px);
   }
 }
 
@@ -84,7 +104,9 @@ a {
   @media (min-width: $w-tablet) {
     margin-bottom: 0;
     max-width: rem(398px);
-    //necessary?
+  }
+  @media (min-width: $w-desktop) {
+    max-width: rem(457px);
   }
 }
 
@@ -95,33 +117,58 @@ a {
   @media (min-width: $w-tablet) {
     margin-bottom: em(25px, 40px);
   }
+  @media (min-width: $w-desktop) {
+    @include setFont(rem(56px), 71px);
+    margin-bottom: em(29px, 56px);
+  }
 }
 
 .paragraph {
   @include setFont(rem(16px), 26px, 500);
   color: color(roman-silver);
   margin-bottom: em(24px, 16px);
+  @media (min-width: $w-desktop) {
+    @include setFont(rem(18px), 28px);
+    margin-bottom: em(24px, 18px);
+  }
+}
+
+.paragraph--top {
+  @media (min-width: $w-desktop) {
+    margin-right: em(12px, 18px);
+    margin-bottom: em(40px, 18px);
+  }
 }
 
 .hero-img-wrapper {
   width: rem(327px);
   height: rem(301px);
   img {
-    width: 430px;
-    height: 405px;
-    margin-left: -53px;
-    margin-top: -19px;
+    width: rem(430px);
+    height: rem(405px);
+    margin-left: rem(-53px);
+    margin-top: rem(-19px);
     @media (min-width: $w-tablet) {
       width: rem(688px);
       height: rem(720px);
       margin-left: rem(-98px);
       margin-top: rem(-214px);
     }
+    @media (min-width: $w-desktop) {
+      width: rem(1042px);
+      height: rem(936px);
+      margin-left: rem(-174px);
+      margin-top: rem(-314px);
+    }
   }
   @media (min-width: $w-tablet) {
     width: rem(216.54px);
     height: rem(382.53px);
     margin-bottom: 0;
+  }
+  @media (min-width: $w-desktop) {
+    width: rem(317px);
+    height: rem(560px);
   }
 }
 
@@ -140,6 +187,12 @@ a {
     grid-template-columns: 1fr 1fr;
     gap: 56px 10px;
   }
+  @media (min-width: $w-desktop) {
+    padding-inline: rem(165px);
+    padding-bottom: rem(140px);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px 30px;
+  }
 }
 
 .courses__heading {
@@ -153,6 +206,11 @@ a {
     padding: em(56px, 24px) em(21px, 24px) em(139px, 24px) em(32px, 24px);
     margin-bottom: 0;
   }
+  @media (min-width: $w-desktop) {
+    @include setFont(rem(32px), 40px);
+    padding: em(64px, 32px) em(32px, 32px) em(138px, 32px);
+    border-radius: 15px;
+  }
 }
 
 .courses__course {
@@ -165,16 +223,31 @@ a {
     padding: 0 rem(21px) rem(32px) rem(32px);
     margin-bottom: 0;
   }
+  @media (min-width: $w-desktop) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-inline: rem(32px);
+    padding-bottom: rem(40px);
+    border-radius: 15px;
+  }
 }
 
 .course__logo {
   transform: translateY(-24px);
+  @media (min-width: $w-desktop) {
+    margin-bottom: rem(8px);
+  }
 }
 
 .course__title {
   @include setFont(rem(20px), 25px, 800);
   color: color(yankees-blue);
   margin-bottom: em(16px, 20px);
+  @media (min-width: $w-desktop) {
+    @include setFont(rem(24px), 30px);
+    margin-bottom: em(24px, 24px);
+  }
 }
 
 .footer {
@@ -185,5 +258,8 @@ a {
   align-items: center;
   @media (min-width: $w-tablet) {
     padding: rem(36px) rem(40px);
+  }
+  @media (min-width: $w-desktop) {
+    padding: rem(32px) rem(165px);
   }
 }

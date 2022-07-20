@@ -32,17 +32,28 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2.375rem;
+  padding-bottom: 2.375rem;
 }
 @media (min-width: 768px) {
   .header {
     padding: 1.5rem 2.5rem 0;
-    margin-bottom: 2.25rem;
+    padding-bottom: 3.125rem;
+  }
+}
+@media (min-width: 1440px) {
+  .header {
+    padding: 1.5rem 10.3125rem 0;
+    padding-bottom: 5.4375rem;
   }
 }
 
 .site-logo {
   width: 5.5625rem;
+}
+@media (min-width: 1440px) {
+  .site-logo {
+    width: 7.323125rem;
+  }
 }
 
 .button {
@@ -60,6 +71,13 @@ a:hover {
 .button:hover {
   background-color: hsl(234deg, 25%, 52%);
 }
+@media (min-width: 1440px) {
+  .button {
+    font-size: 1.125rem;
+    line-height: 1.5555555556;
+    padding: 0.7777777778em 1.7222222222em;
+  }
+}
 
 .button--warm {
   padding: 0.9375em 2.3125em;
@@ -68,6 +86,11 @@ a:hover {
 }
 .button--warm:hover {
   background-image: linear-gradient(0deg, hsla(0deg, 0%, 100%, 0.502), hsla(0deg, 0%, 100%, 0.502)), linear-gradient(180deg, hsl(13deg, 100%, 64%) 0%, hsl(322deg, 87%, 55%) 100%);
+}
+@media (min-width: 1440px) {
+  .button--warm {
+    padding: 1.0555555556em 1.7222222222em;
+  }
 }
 
 .button--cold {
@@ -86,10 +109,18 @@ a:hover {
 }
 @media (min-width: 768px) {
   .top-section {
-    padding-inline: 2.5rem;
+    padding-left: 2.5rem;
+    padding-right: 5.09375rem;
     padding-bottom: 10.04375rem;
     flex-direction: row;
-    gap: 2.08125rem;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1440px) {
+  .top-section {
+    padding-left: 10.3125rem;
+    padding-right: 13.6875rem;
+    padding-bottom: 8.375rem;
   }
 }
 
@@ -100,6 +131,11 @@ a:hover {
   .top__text-content {
     margin-bottom: 0;
     max-width: 24.875rem;
+  }
+}
+@media (min-width: 1440px) {
+  .top__text-content {
+    max-width: 28.5625rem;
   }
 }
 
@@ -115,6 +151,13 @@ a:hover {
     margin-bottom: 0.625em;
   }
 }
+@media (min-width: 1440px) {
+  .top__heading {
+    font-size: 3.5rem;
+    line-height: 1.2678571429;
+    margin-bottom: 0.5178571429em;
+  }
+}
 
 .paragraph {
   font-size: 1rem;
@@ -123,16 +166,30 @@ a:hover {
   color: hsl(232deg, 10%, 56%);
   margin-bottom: 1.5em;
 }
+@media (min-width: 1440px) {
+  .paragraph {
+    font-size: 1.125rem;
+    line-height: 1.5555555556;
+    margin-bottom: 1.3333333333em;
+  }
+}
+
+@media (min-width: 1440px) {
+  .paragraph--top {
+    margin-right: 0.6666666667em;
+    margin-bottom: 2.2222222222em;
+  }
+}
 
 .hero-img-wrapper {
   width: 20.4375rem;
   height: 18.8125rem;
 }
 .hero-img-wrapper img {
-  width: 430px;
-  height: 405px;
-  margin-left: -53px;
-  margin-top: -19px;
+  width: 26.875rem;
+  height: 25.3125rem;
+  margin-left: -3.3125rem;
+  margin-top: -1.1875rem;
 }
 @media (min-width: 768px) {
   .hero-img-wrapper img {
@@ -142,11 +199,25 @@ a:hover {
     margin-top: -13.375rem;
   }
 }
+@media (min-width: 1440px) {
+  .hero-img-wrapper img {
+    width: 65.125rem;
+    height: 58.5rem;
+    margin-left: -10.875rem;
+    margin-top: -19.625rem;
+  }
+}
 @media (min-width: 768px) {
   .hero-img-wrapper {
     width: 13.53375rem;
     height: 23.908125rem;
     margin-bottom: 0;
+  }
+}
+@media (min-width: 1440px) {
+  .hero-img-wrapper {
+    width: 19.8125rem;
+    height: 35rem;
   }
 }
 
@@ -162,6 +233,14 @@ a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 56px 10px;
+  }
+}
+@media (min-width: 1440px) {
+  .courses {
+    padding-inline: 10.3125rem;
+    padding-bottom: 8.75rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 80px 30px;
   }
 }
 
@@ -181,6 +260,14 @@ a:hover {
     margin-bottom: 0;
   }
 }
+@media (min-width: 1440px) {
+  .courses__heading {
+    font-size: 2rem;
+    line-height: 1.25;
+    padding: 2em 1em 4.3125em;
+    border-radius: 15px;
+  }
+}
 
 .courses__course {
   background: hsl(0deg, 0%, 100%);
@@ -195,9 +282,24 @@ a:hover {
     margin-bottom: 0;
   }
 }
+@media (min-width: 1440px) {
+  .courses__course {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-inline: 2rem;
+    padding-bottom: 2.5rem;
+    border-radius: 15px;
+  }
+}
 
 .course__logo {
   transform: translateY(-24px);
+}
+@media (min-width: 1440px) {
+  .course__logo {
+    margin-bottom: 0.5rem;
+  }
 }
 
 .course__title {
@@ -206,6 +308,13 @@ a:hover {
   font-weight: 800;
   color: hsl(233deg, 54%, 16%);
   margin-bottom: 0.8em;
+}
+@media (min-width: 1440px) {
+  .course__title {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin-bottom: 1em;
+  }
 }
 
 .footer {
@@ -218,6 +327,11 @@ a:hover {
 @media (min-width: 768px) {
   .footer {
     padding: 2.25rem 2.5rem;
+  }
+}
+@media (min-width: 1440px) {
+  .footer {
+    padding: 2rem 10.3125rem;
   }
 }
 

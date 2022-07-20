@@ -12,7 +12,7 @@
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-  background-color: hsl(0deg, 0%, 95%);
+  background-color: hsl(0deg, 0%, 100%);
   overflow-x: hidden;
 }
 
@@ -34,6 +34,12 @@ a:hover {
   align-items: center;
   margin-bottom: 2.375rem;
 }
+@media (min-width: 768px) {
+  .header {
+    padding: 1.5rem 2.5rem 0;
+    margin-bottom: 2.25rem;
+  }
+}
 
 .site-logo {
   width: 5.5625rem;
@@ -49,6 +55,7 @@ a:hover {
   border: 0;
   border-radius: 28px;
   cursor: pointer;
+  z-index: 1;
 }
 .button:hover {
   background-color: hsl(234deg, 25%, 52%);
@@ -70,19 +77,30 @@ a:hover {
   background-image: linear-gradient(0deg, hsla(0deg, 0%, 100%, 0.502), hsla(0deg, 0%, 100%, 0.5)), linear-gradient(180deg, hsl(237deg, 100%, 64%) -54.32%, hsl(322deg, 87%, 55%) 100%);
 }
 
-.main {
-  padding-inline: 1rem;
-  padding-bottom: 2.5rem;
-}
-
 .top-section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-inline: 1rem;
+  padding-bottom: 4.125rem;
+}
+@media (min-width: 768px) {
+  .top-section {
+    padding-inline: 2.5rem;
+    padding-bottom: 10.04375rem;
+    flex-direction: row;
+    gap: 2.08125rem;
+  }
 }
 
 .top__text-content {
   margin-bottom: 2.875rem;
+}
+@media (min-width: 768px) {
+  .top__text-content {
+    margin-bottom: 0;
+    max-width: 24.875rem;
+  }
 }
 
 .top__heading {
@@ -91,6 +109,11 @@ a:hover {
   font-weight: 800;
   color: hsl(233deg, 54%, 16%);
   margin-bottom: 0.9em;
+}
+@media (min-width: 768px) {
+  .top__heading {
+    margin-bottom: 0.625em;
+  }
 }
 
 .paragraph {
@@ -104,13 +127,42 @@ a:hover {
 .hero-img-wrapper {
   width: 20.4375rem;
   height: 18.8125rem;
-  margin-bottom: 4.125rem;
 }
 .hero-img-wrapper img {
   width: 430px;
   height: 405px;
   margin-left: -53px;
   margin-top: -19px;
+}
+@media (min-width: 768px) {
+  .hero-img-wrapper img {
+    width: 43rem;
+    height: 45rem;
+    margin-left: -6.125rem;
+    margin-top: -13.375rem;
+  }
+}
+@media (min-width: 768px) {
+  .hero-img-wrapper {
+    width: 13.53375rem;
+    height: 23.908125rem;
+    margin-bottom: 0;
+  }
+}
+
+.courses {
+  padding-inline: 1rem;
+  padding-bottom: 2.5rem;
+  background-image: linear-gradient(180deg, hsl(0deg, 0%, 100%) 0%, hsl(236deg, 100%, 97%) 100%);
+}
+@media (min-width: 768px) {
+  .courses {
+    padding-inline: 2.5rem;
+    padding-bottom: 5.375rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px 10px;
+  }
 }
 
 .courses__heading {
@@ -123,6 +175,12 @@ a:hover {
   border-radius: 10px;
   margin-bottom: 1.6666666667em;
 }
+@media (min-width: 768px) {
+  .courses__heading {
+    padding: 2.3333333333em 0.875em 5.7916666667em 1.3333333333em;
+    margin-bottom: 0;
+  }
+}
 
 .courses__course {
   background: hsl(0deg, 0%, 100%);
@@ -130,7 +188,12 @@ a:hover {
   border-radius: 10px;
   padding: 0 1.75rem 2rem;
   margin-bottom: 2.5rem;
-  position: relative;
+}
+@media (min-width: 768px) {
+  .courses__course {
+    padding: 0 1.3125rem 2rem 2rem;
+    margin-bottom: 0;
+  }
 }
 
 .course__logo {
@@ -151,6 +214,11 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (min-width: 768px) {
+  .footer {
+    padding: 2.25rem 2.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

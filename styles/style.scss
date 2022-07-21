@@ -20,25 +20,22 @@ a {
 }
 
 .header {
-  padding: rem(16px) rem(16px) 0;
+  padding-top: lerp_clamp($w-mobile, rem(16px), $w-tablet, rem(24px));
+  padding-inline: lerp_max($w-mobile, rem(16px), $w-tablet, rem(40px));
+  padding-bottom: lerp_max($w-mobile, rem(38px), $w-tablet, rem(50px));
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: rem(38px);
   @media (min-width: $w-tablet) {
-    padding: rem(24px) rem(40px) 0;
-    padding-bottom: rem(50px);
-  }
-  @media (min-width: $w-desktop) {
-    padding: rem(24px) rem(165px) 0;
-    padding-bottom: rem(87px);
+    padding-inline: lerp_min($w-tablet, rem(40px), $w-desktop, rem(165px));
+    padding-bottom: lerp_min($w-tablet, rem(50px), $w-desktop, rem(87px));
   }
 }
 
 .site-logo {
   width: rem(89px);
-  @media (min-width: $w-desktop) {
-    width: rem(117.17px);
+  @media (min-width: $w-tablet) {
+    width: lerp_min($w-tablet, rem(89px), $w-desktop, rem(117.17px));
   }
 }
 
@@ -54,9 +51,11 @@ a {
   &:hover {
     background-color: color(dark-blue-gray);
   }
-  @media (min-width: $w-desktop) {
-    @include setFont(rem(18px), 28px);
-    padding: em(14px, 18px) em(31px, 18px);
+  @media (min-width: $w-tablet) {
+    font-size: lerp_min($w-tablet, rem(16px), $w-desktop, rem(18px));
+    line-height: 28px;
+    padding-block: lerp_min($w-tablet, rem(10px), $w-desktop, rem(14px));
+    padding-inline: lerp_min($w-tablet, rem(24px), $w-desktop, rem(31px));
   }
 }
 
@@ -67,8 +66,9 @@ a {
   &:hover {
     background-image: $gradient-warm-hover;
   }
-  @media (min-width: $w-desktop) {
-    padding: em(19px, 18px) em(31px, 18px);
+  @media (min-width: $w-tablet) {
+    padding-block: lerp_min($w-tablet, rem(15px), $w-desktop, rem(19px));
+    padding-inline: lerp_max($w-tablet, rem(37px), $w-desktop, rem(31px));
   }
 }
 
@@ -83,30 +83,22 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-inline: rem(16px);
+  padding-inline: lerp_max($w-mobile, rem(16px), $w-tablet, rem(40px));
   padding-bottom: rem(66px);
-  @media (min-width: $w-tablet) {
-    padding-left: rem(40px);
-    padding-right: rem(81.5px);
-    padding-bottom: rem(160.7px);
+  @media (min-width: 700px) {
+    padding-left: lerp_clamp($w-tablet, rem(40px), $w-desktop, rem(165px));
+    padding-right: lerp_clamp($w-tablet, rem(81.5px), $w-desktop, rem(219px));
+    padding-bottom: lerp_clamp($w-tablet, rem(160.7px), $w-desktop, rem(134px));
     flex-direction: row;
     justify-content: space-between;
-  }
-  @media (min-width: $w-desktop) {
-    padding-left: rem(165px);
-    padding-right: rem(219px);
-    padding-bottom: rem(134px);
   }
 }
 
 .top__text-content {
   margin-bottom: rem(46px);
-  @media (min-width: $w-tablet) {
+  @media (min-width: 700px) {
     margin-bottom: 0;
-    max-width: rem(398px);
-  }
-  @media (min-width: $w-desktop) {
-    max-width: rem(457px);
+    max-width: lerp_min($w-tablet, rem(398px), $w-desktop, rem(457px));
   }
 }
 
@@ -114,12 +106,10 @@ a {
   @include setFont(rem(40px), 50px, 800);
   color: color(yankees-blue);
   margin-bottom: em(36px, 40px);
-  @media (min-width: $w-tablet) {
-    margin-bottom: em(25px, 40px);
-  }
-  @media (min-width: $w-desktop) {
-    @include setFont(rem(56px), 71px);
-    margin-bottom: em(29px, 56px);
+  @media (min-width: 700px) {
+    font-size: lerp_clamp($w_tablet, rem(40px), $w-desktop, rem(56px));
+    line-height: lerp_clamp($w_tablet, 50px, $w-desktop, 71px);
+    margin-bottom: lerp_clamp($w-tablet, rem(25px), $w-desktop, rem(29px));
   }
 }
 
@@ -127,32 +117,38 @@ a {
   @include setFont(rem(16px), 26px, 500);
   color: color(roman-silver);
   margin-bottom: em(24px, 16px);
-  @media (min-width: $w-desktop) {
-    @include setFont(rem(18px), 28px);
-    margin-bottom: em(24px, 18px);
+  @media (min-width: 700px) {
+    font-size: lerp_clamp($w-tablet, rem(16px), $w-desktop, rem(18px));
+    line-height: lerp_clamp($w-tablet, 26px, $w-desktop, 28px);
+    margin-bottom: rem(24px);
   }
 }
 
 .paragraph--top {
-  @media (min-width: $w-desktop) {
-    margin-right: em(12px, 18px);
-    margin-bottom: em(40px, 18px);
+  @media (min-width: 700px) {
+    margin-right: lerp_clamp($w-tablet, rem(0px), $w-desktop, rem(12px));
+    margin-right: lerp_clamp($w-tablet, rem(0px), $w-desktop, rem(40px));
   }
 }
 
 .hero-img-wrapper {
-  width: rem(327px);
-  height: rem(301px);
+  width: lerp_max($w-mobile, rem(327px), 700px, rem(560px));
+  height: lerp_max($w-mobile, rem(301px), 700px, rem(515.5px));
+  @media (min-width: 700px) {
+    width: lerp($w-tablet, rem(216.54px), $w-desktop, rem(317px));
+    height: lerp($w-tablet, rem(382.53px), $w-desktop, rem(560px));
+    margin-bottom: 0;
+  }
   img {
-    width: rem(430px);
-    height: rem(405px);
-    margin-left: rem(-53px);
-    margin-top: rem(-19px);
-    @media (min-width: $w-tablet) {
-      width: rem(688px);
-      height: rem(720px);
-      margin-left: rem(-98px);
-      margin-top: rem(-214px);
+    width: lerp_max($w-mobile, rem(430px), 700px, rem(742px));
+    height: lerp_max($w-mobile, rem(405px), 700px, rem(696px));
+    margin-left: lerp_min($w-mobile, rem(-53px), 700px, rem(-92px));
+    margin-top: lerp_min($w-mobile, rem(-19px), 700px, rem(-33px));
+    @media (min-width: 700px) {
+      width: lerp($w-tablet, rem(688px), $w-desktop, rem(1011px));
+      height: lerp($w-tablet, rem(720px), $w-desktop, rem(1055px));
+      margin-left: lerp($w-tablet, rem(-98px), $w-desktop, rem(-145px));
+      margin-top: lerp($w-tablet, rem(-214px), $w-desktop, rem(-313px));
     }
     @media (min-width: $w-desktop) {
       width: rem(1042px);
@@ -161,37 +157,26 @@ a {
       margin-top: rem(-314px);
     }
   }
-  @media (min-width: $w-tablet) {
-    width: rem(216.54px);
-    height: rem(382.53px);
-    margin-bottom: 0;
-  }
-  @media (min-width: $w-desktop) {
-    width: rem(317px);
-    height: rem(560px);
-  }
 }
 
 .courses {
-  padding-inline: rem(16px);
+  padding-inline: lerp_max($w-mobile, rem(16px), 700px, rem(40px));
   padding-bottom: rem(40px);
   background-image: linear-gradient(
     180deg,
     hsl(0, 0%, 100%) 0%,
     hsl(236, 100%, 97%) 100%
   );
-  @media (min-width: $w-tablet) {
-    padding-inline: rem(40px);
-    padding-bottom: rem(86px);
+  @media (min-width: 700px) {
+    padding-inline: lerp_clamp($w-tablet, rem(40px), $w-desktop, rem(165px));
+    padding-bottom: lerp_clamp($w-tablet, rem(86px), $w-desktop, rem(140px));
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 56px 10px;
+    row-gap: lerp_clamp($w-tablet, 56px, 1200px, 80px);
+    column-gap: lerp_clamp($w-tablet, 10px, 1200px, 30px);
   }
-  @media (min-width: $w-desktop) {
-    padding-inline: rem(165px);
-    padding-bottom: rem(140px);
+  @media (min-width: 1200px) {
     grid-template-columns: repeat(3, 1fr);
-    gap: 80px 30px;
   }
 }
 
@@ -202,13 +187,16 @@ a {
   color: color(white);
   border-radius: 10px;
   margin-bottom: em(40px, 24px);
-  @media (min-width: $w-tablet) {
-    padding: em(56px, 24px) em(21px, 24px) em(139px, 24px) em(32px, 24px);
+  @media (min-width: 700px) {
+    padding-top: lerp_clamp($w-tablet, rem(56px), $w-desktop, rem(64px));
+    padding-bottom: lerp_clamp($w-tablet, rem(139px), $w-desktop, rem(138px));
+    padding-left: rem(32px);
+    padding-right: lerp_clamp($w-tablet, rem(21px), $w-desktop, rem(32px));
+    font-size: lerp_clamp($w-tablet, rem(24px), $w-desktop, rem(32px));
+    line-height: lerp_clamp($w-tablet, 32px, $w-desktop, 40px);
     margin-bottom: 0;
   }
-  @media (min-width: $w-desktop) {
-    @include setFont(rem(32px), 40px);
-    padding: em(64px, 32px) em(32px, 32px) em(138px, 32px);
+  @media (min-width: 1200px) {
     border-radius: 15px;
   }
 }
@@ -219,23 +207,23 @@ a {
   border-radius: 10px;
   padding: 0 rem(28px) rem(32px);
   margin-bottom: rem(40px);
-  @media (min-width: $w-tablet) {
-    padding: 0 rem(21px) rem(32px) rem(32px);
+  @media (min-width: 700px) {
+    padding-left: rem(32px);
+    padding-right: lerp_clamp($w-tablet, rem(21px), $w-desktop, rem(32px));
+    padding-bottom: lerp_clamp($w-tablet, rem(32px), $w-desktop, rem(40px));
     margin-bottom: 0;
-  }
-  @media (min-width: $w-desktop) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-inline: rem(32px);
-    padding-bottom: rem(40px);
+  }
+  @media (min-width: 1200px) {
     border-radius: 15px;
   }
 }
 
 .course__logo {
   transform: translateY(-24px);
-  @media (min-width: $w-desktop) {
+  @media (min-width: 1200px) {
     margin-bottom: rem(8px);
   }
 }
@@ -244,22 +232,22 @@ a {
   @include setFont(rem(20px), 25px, 800);
   color: color(yankees-blue);
   margin-bottom: em(16px, 20px);
-  @media (min-width: $w-desktop) {
-    @include setFont(rem(24px), 30px);
-    margin-bottom: em(24px, 24px);
+  @media (min-width: 700px) {
+    font-size: lerp_clamp($w-tablet, rem(20px), $w-desktop, rem(24px));
+    line-height: lerp_clamp($w-tablet, 25px, $w-desktop, 30px);
+    margin-bottom: lerp_clamp($w-tablet, rem(16px), $w-desktop, rem(24px));
   }
 }
 
 .footer {
   background-color: color(yankees-blue);
-  padding: rem(36px) rem(16px);
+  padding-block: rem(36px);
+  padding-inline: lerp_max($w-mobile, rem(16px), $w-tablet, rem(40px));
   display: flex;
   justify-content: space-between;
   align-items: center;
   @media (min-width: $w-tablet) {
-    padding: rem(36px) rem(40px);
-  }
-  @media (min-width: $w-desktop) {
-    padding: rem(32px) rem(165px);
+    padding-block: lerp_max($w-tablet, rem(36px), $w-desktop, rem(32px));
+    padding-inline: lerp_min($w-tablet, rem(40px), $w-desktop, rem(165px));
   }
 }

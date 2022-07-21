@@ -82,7 +82,6 @@ a {
 .top-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-inline: lerp_max($w-mobile, rem(16px), $w-tablet, rem(40px));
   padding-bottom: rem(66px);
   @media (min-width: 700px) {
@@ -98,6 +97,7 @@ a {
   margin-bottom: rem(46px);
   @media (min-width: 700px) {
     margin-bottom: 0;
+    padding-top: lerp_min($w-tablet, rem(49.3px), $w-desktop, rem(85px));
     max-width: lerp_min($w-tablet, rem(398px), $w-desktop, rem(457px));
   }
 }

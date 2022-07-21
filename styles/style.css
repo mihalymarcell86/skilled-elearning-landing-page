@@ -108,7 +108,7 @@ a:hover {
   .top-section {
     padding-left: clamp(2.5rem, 0.1860119048 * 100vw + -6.4285714286rem, 10.3125rem);
     padding-right: clamp(5.09375rem, 0.2046130952 * 100vw + -4.7276785714rem, 13.6875rem);
-    padding-bottom: clamp(10.04375rem, -0.0397321429 * 100vw + 11.9508928571rem, 8.375rem);
+    padding-bottom: clamp(8.375rem, -0.0397321429 * 100vw + 11.9508928571rem, 10.04375rem);
     flex-direction: row;
     justify-content: space-between;
   }
@@ -229,7 +229,7 @@ a:hover {
 @media (min-width: 700px) {
   .courses__heading {
     padding-top: clamp(3.5rem, 0.0119047619 * 100vw + 2.9285714286rem, 4rem);
-    padding-bottom: clamp(8.6875rem, -0.0014880952 * 100vw + 8.7589285714rem, 8.625rem);
+    padding-bottom: clamp(8.625rem, -0.0014880952 * 100vw + 8.7589285714rem, 8.6875rem);
     padding-left: 2rem;
     padding-right: clamp(1.3125rem, 0.0163690476 * 100vw + 0.5267857143rem, 2rem);
     font-size: clamp(1.5rem, 0.0119047619 * 100vw + 0.9285714286rem, 2rem);
